@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verify Email Address</title>
+    {{> meta}}
+  </head>
+  <body style="margin: 0;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #F0E8E1; margin: 0; padding: 0; font-family: Arial, sans-serif;">
+      <tr>
+        <td align="center">
+          {{> header}}
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #FFFFFF; border: 1px solid #EAEBED; padding: 40px 30px; border-radius: 12px; max-width: 600px;">
+            <tr>
+              <td>
+                <h1 style="font-size: 24px; color: #3A3131; font-weight: 600; margin: 0 0 20px; line-height: 1.3;">Verify Email Address</h1>
+                <p style="font-size: 16px; color: #3A3131; line-height: 1.5; margin: 0 0 20px;">Please verify your email by clicking the button below:</p>
+                <a href="{{returnUrl}}" style="display: block; background-color: #3A3131; color: #FFFFFF; text-decoration: none; padding: 12px 0; font-size: 16px; font-weight: bold; border-radius: 8px; width: 300px;text-align: center; margin: 0 0 20px;">Verify Email</a>
+                <p style="font-size: 16px; color: #3A3131; line-height: 1.5; margin: 0;">This link will expire in 24 hours.</p>
+              </td>
+            </tr>
+          </table>
+          {{> footer}}
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

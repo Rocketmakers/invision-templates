@@ -1,0 +1,27 @@
+{
+  "name": "@repo/typescript-scripts-core",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix",
+    "gen-sendgrid-payload-schemas": "generate-schemas --serviceNames=sendgrid",
+    "test-sendgrid-templates": "validate-templates --serviceName=sendgrid",
+    "compile-layouts": "node ./dist/run/compileLayouts.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rocketmakers/log": "0.1.0",
+    "@rocketmakers/orbit-template-http-repository": "2.0.5",
+    "@rocketmakers/shell-commands": "8.1.0",
+    "ajv": "8.17.1",
+    "handlebars": "4.7.8"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "@types/fs-extra": "11.0.4",
+    "tslib": "2.8.1",
+    "typescript": "5.8.2",
+    "typescript-json-schema": "0.65.1"
+  }
+}

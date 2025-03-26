@@ -1,0 +1,30 @@
+{
+  "name": "@repo/client-templates",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "prepare": "if [ -z \"$CI\" ]; then husky; fi",
+    "remove-turbo-cache": "rm -rf ./.turbo",
+    "format": "prettier --check \"**/*.{ts,tsx,md,css,js}\"",
+    "format-fix": "prettier --write \"**/*.{ts,tsx,md,css,js}\"",
+    "lint": "turbo lint",
+    "lint-fix": "turbo lint-fix",
+    "compile-layouts": "turbo compile-layouts -- --serviceName=sendgrid"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "dependencies": {
+    "@rocketmakers/eslint": "2.1.0",
+    "@rocketmakers/prettier-config": "2.1.0",
+    "commitizen": "4.3.1",
+    "cz-customizable": "7.4.0",
+    "eslint": "8.57.1",
+    "husky": "9.1.7",
+    "prettier": "3.5.2",
+    "turbo": "2.4.2"
+  },
+  "packageManager": "pnpm@10.4.1"
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "globalEnv": ["ASDF_DIR", "ASDF_DATA_DIR", "LOG_LEVEL"],
+  "tasks": {
+    "lint": {},
+    "lint-fix": {},
+    "build": {},
+    "compile-layouts": {
+      "dependsOn": ["^build", "build"]
+    }
+  }
+}
