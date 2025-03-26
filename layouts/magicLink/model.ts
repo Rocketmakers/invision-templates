@@ -4,13 +4,13 @@
  * @examples require(".").sampleData
  */
 export interface IModel {
-  firstName?: string;
+  name?: string;
   returnUrl: string;
 }
 
 export const sampleData: IModel[] = [
   {
-    firstName: "firstName",
+    name: "name",
     returnUrl: "https://www.rocketmakers.com",
   },
   {

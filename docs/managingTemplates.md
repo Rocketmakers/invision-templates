@@ -15,7 +15,7 @@ Members of this git repository can be granted varying levels of access, to updat
 Payload json schemas can be generated for all layouts within this directory by running:
 
 ```bash
-# pnpm gen-payload-schemas --serviceNames=sendgrid
+# pnpm gen-payload-schemas --serviceNames=resend
 pnpm gen-payload-schemas --serviceNames=<<SERVICE_NAME>>
 ```
 
@@ -23,21 +23,21 @@ This will generate a `payloadSchema.json` file within your layout template direc
 
 ## Testing templates
 
-You can test sendgrid templates within this repository by running the following:
+You can test resend templates within this repository by running the following:
 
 ```bash
-# pnpm test-templates --serviceNames=sendgrid
+# pnpm test-templates --serviceNames=resend
 pnpm test-templates --serviceNames=<<SERVICE_NAME>>
 ```
 
-This will look in your `sendgrid.json` file and make sure all registered layouts compile successfully with the provided partials and sample data.
+This will look in your `resend.json` file and make sure all registered layouts compile successfully with the provided partials and sample data.
 
 ## Viewing a compiled template
 
 Run the following script to compile out each layout to the `compiledLayouts` dir. The script uses test data from your `model.ts` and allows you to visualise the end product for a notification.
 
 ```bash
-# pnpm compile-layouts -- --serviceName=sendgrid
+# pnpm compile-layouts -- --serviceName=resend
 pnpm compile-layouts -- --serviceName=<<SERVICE_NAME>>
 ```
 
