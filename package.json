@@ -9,7 +9,9 @@
     "format-fix": "prettier --write \"**/*.{ts,tsx,md,css,js}\"",
     "lint": "turbo lint",
     "lint-fix": "turbo lint-fix",
-    "compile-layouts": "turbo compile-layouts -- --serviceName=sendgrid"
+    "compile-layouts": "turbo compile-layouts",
+    "gen-payload-schemas": "exec generate-schemas",
+    "test-templates": "exec validate-templates"
   },
   "config": {
     "commitizen": {
@@ -19,12 +21,16 @@
   "dependencies": {
     "@rocketmakers/eslint": "2.1.0",
     "@rocketmakers/prettier-config": "2.1.0",
+    "@rocketmakers/orbit-template-http-repository": "3.1.3",
     "commitizen": "4.3.1",
     "cz-customizable": "7.4.0",
     "eslint": "8.57.1",
     "husky": "9.1.7",
     "prettier": "3.5.2",
     "turbo": "2.4.2"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*"
   },
   "packageManager": "pnpm@10.4.1"
 }

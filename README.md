@@ -1,4 +1,4 @@
-# norland-templates
+# client-templates
 
 Repository for managing notification templates with git and `@rocketmakers/orbit-template-http-repository`
 

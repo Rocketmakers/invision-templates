@@ -8,14 +8,15 @@ In this repo notification templates are pulled from the `production` branch. Any
 
 ## Access
 
-Members of this git repository can be granted varying levels of access, to update templates and approve merge requests, in the [project settings](https://github.com/Rocketmakers/norland-templates/settings/access).
+Members of this git repository can be granted varying levels of access, to update templates and approve merge requests, in the [project settings](https://github.com/Rocketmakers/client-templates/settings/access).
 
 ## Generating payload schemas
 
 Payload json schemas can be generated for all layouts within this directory by running:
 
 ```bash
-npm run generate-payload-schemas
+# pnpm gen-payload-schemas --serviceNames=sendgrid
+pnpm gen-payload-schemas --serviceNames=<<SERVICE_NAME>>
 ```
 
 This will generate a `payloadSchema.json` file within your layout template directory, which will be used to validate payloads when sending notifications.
@@ -25,7 +26,8 @@ This will generate a `payloadSchema.json` file within your layout template direc
 You can test sendgrid templates within this repository by running the following:
 
 ```bash
-npm run test-sendgrid-templates
+# pnpm test-templates --serviceNames=sendgrid
+pnpm test-templates --serviceNames=<<SERVICE_NAME>>
 ```
 
 This will look in your `sendgrid.json` file and make sure all registered layouts compile successfully with the provided partials and sample data.
@@ -35,7 +37,8 @@ This will look in your `sendgrid.json` file and make sure all registered layouts
 Run the following script to compile out each layout to the `compiledLayouts` dir. The script uses test data from your `model.ts` and allows you to visualise the end product for a notification.
 
 ```bash
-npm run compile-layouts -- -s=<serviceName>
+# pnpm compile-layouts -- --serviceName=sendgrid
+pnpm compile-layouts -- --serviceName=<<SERVICE_NAME>>
 ```
 
 ## Creating/updating a template
@@ -46,10 +49,10 @@ _Whenever any change to this template repository are made you should run both of
 
 ```bash
 # Ensure schemas generate successfully and are up to date
-npm run gen-payload-schemas
+pnpm gen-payload-schemas --serviceNames=<<SERVICE_NAME>>
 
 # Test example payload data against defined templates
-npm run test-sendgrid-templates
+pnpm test-templates --serviceNames=<<SERVICE_NAME>>
 ```
 
 This will make sure any potentially breaking/incorrect changes to notifications are not merged into `production`.
@@ -59,11 +62,11 @@ This will make sure any potentially breaking/incorrect changes to notifications 
 When changes are made to this template repository there is no need to re-deploy your API/application. You can call the endpoint below to reload the notification template cache within the deployed api. From then on all notifications will be sent using the newly updated templates.
 
 ```bash
-# POST request to: {{NorlandAPI}}/templates/update
+# POST request to: {{API}}/templates/update
 ```
 
 ## Branching & environments
 
-Currently there are two branches active for this repository: `production` and `test`. The Norland source code repository targets those branches in the deployed production and local dev environments respectively. This means that any changes to the `test` branch can be manually checked using a locally deployed version of the Norland API. Once those checks are complete the `test` branch can be merged back into `production`.
+Currently there are two branches active for this repository: `production` and `test`. The source code repository targets those branches in the deployed production and local dev environments respectively. This means that any changes to the `test` branch can be manually checked using a locally deployed version of the API. Once those checks are complete the `test` branch can be merged back into `production`.
 
 Although there are not currently any CI jobs running on creation of a merge request or access controls setup for who can create/merge branches in this repository, these are both configurable features within this type of git managed template repository.
