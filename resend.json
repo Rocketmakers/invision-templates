@@ -15,6 +15,10 @@
     "magicLink": {
       "path": "layouts/magicLink",
       "templates": ["html", "txt"]
+    },
+    "createApplication": {
+      "path": "layouts/createApplication",
+      "templates": ["html", "txt", "subject"]
     }
   }
 }
