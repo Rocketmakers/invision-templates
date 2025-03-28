@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New application available</title>
+    {{> meta}}
+  </head>
+  <body style="margin: 0;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #F0E8E1; margin: 0; padding: 0; font-family: Arial, sans-serif;">
+      <tr>
+        <td align="center">
+          {{> header}}
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #FFFFFF; border: 1px solid #EAEBED; padding: 40px 30px; border-radius: 12px; max-width: 600px;">
+            <tr>
+              <td>
+                <h1 style="font-size: 24px; color: #3A3131; font-weight: 600; margin: 0 0 20px; line-height: 1.3;">New application available</h1>
+                {{#if name}}
+                <p style="font-size: 16px; color: #3A3131; line-height: 1.5; margin: 0 0 20px;">To {{name}}</p>
+                {{/if}}
+                <p style="font-size: 16px; color: #3A3131; line-height: 1.5; margin: 0 0 20px;">An application has been submitted to the Invision platform and has elected you as their broker. Our underwriter team will be in contact with you regarding this application.</p>
+              </td>
+            </tr>
+          </table>
+          {{> footer}}
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

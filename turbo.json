@@ -7,6 +7,8 @@
     "lint-fix": {},
     "build": {},
     "compile-layouts": {
+      "inputs": ["layouts/**", "partials/**"],
+      "outputs": ["compiledLayouts/**"],
       "dependsOn": ["^build", "build"]
     }
   }

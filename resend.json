@@ -19,6 +19,18 @@
     "createApplication": {
       "path": "layouts/createApplication",
       "templates": ["html", "txt", "subject"]
+    },
+    "submitApplicationAppointedContact": {
+      "path": "layouts/submitApplicationAppointedContact",
+      "templates": ["html", "txt", "subject"]
+    },
+    "submitApplicationBroker": {
+      "path": "layouts/submitApplicationBroker",
+      "templates": ["html", "txt", "subject"]
+    },
+    "submitApplicationUnderwriter": {
+      "path": "layouts/submitApplicationUnderwriter",
+      "templates": ["html", "txt", "subject"]
     }
   }
 }
