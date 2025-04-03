@@ -67,6 +67,6 @@ When changes are made to this template repository there is no need to re-deploy 
 
 ## Branching & environments
 
-Currently there are two branches active for this repository: `production` and `test`. The source code repository targets those branches in the deployed production and local dev environments respectively. This means that any changes to the `test` branch can be manually checked using a locally deployed version of the API. Once those checks are complete the `test` branch can be merged back into `production`.
+Currently there are two branches active for this repository: `production` and `staging`. The source code repository targets those branches in the deployed production and local dev environments respectively. This means that any changes to the `staging` branch can be manually checked using a locally deployed version of the API. Once those checks are complete the `staging` branch can be merged back into `production`.
 
 Although there are not currently any CI jobs running on creation of a merge request or access controls setup for who can create/merge branches in this repository, these are both configurable features within this type of git managed template repository.
