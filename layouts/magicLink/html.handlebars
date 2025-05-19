@@ -1,26 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <title>Log into Invision</title>
     {{> meta}}
-  </head>
-  <body style="margin: 0;">
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #F1F2F2; margin: 0; padding: 0; font-family: Arial, sans-serif;">
+  <style>
+@media only screen and (max-width: 620px) {
+  table[class=body] h1 {
+    font-size: 28px !important;
+    margin-bottom: 10px !important;
+  }
+
+  table[class=body] p,
+table[class=body] ul,
+table[class=body] ol,
+table[class=body] td,
+table[class=body] span,
+table[class=body] a {
+    font-size: 16px !important;
+  }
+
+  table[class=body] .wrapper,
+table[class=body] .article {
+    padding: 10px !important;
+  }
+
+  table[class=body] .content {
+    padding: 0 !important;
+  }
+
+  table[class=body] .container {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  table[class=body] .main {
+    border-left-width: 0 !important;
+    border-radius: 0 !important;
+    border-right-width: 0 !important;
+  }
+
+  table[class=body] .btn table {
+    width: 100% !important;
+  }
+
+  table[class=body] .btn a {
+    width: 100% !important;
+  }
+
+  table[class=body] .img-responsive {
+    height: auto !important;
+    max-width: 100% !important;
+    width: auto !important;
+  }
+}
+@media all {
+  .ExternalClass {
+    width: 100%;
+  }
+
+  .ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+    line-height: 100%;
+  }
+
+  .apple-link a {
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .btn-primary table td:hover {
+    background-color: #d5075d !important;
+  }
+
+  .btn-primary a:hover {
+    background-color: #d5075d !important;
+    border-color: #d5075d !important;
+  }
+}
+</style></head>
+  <body class style="background-color: #1D2252; font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; width: 100%; font-family: 'Manrope', sans-serif;" width="100%">
       <tr>
-        <td align="center">
-          {{> header}}
-          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #FFFFFF; border: 1px solid #EAEBED; padding: 40px 30px; border-radius: 12px; max-width: 600px;">
-            <tr>
-              <td>
-                <h1 style="font-size: 24px; color: #3A3131; font-weight: 600; margin: 0 0 20px; line-height: 1.3;">Welcome back!</h1>
-                <p style="font-size: 16px; color: #3A3131; line-height: 1.5; margin: 0 0 20px;">To access your account, please click the button below.</p>
-                <a href="{{returnUrl}}" style="display: block; background-color: #3A3131; color: #FFFFFF; text-decoration: none; padding: 12px 0; font-size: 16px; font-weight: bold; border-radius: 8px; width: 300px;text-align: center; margin: 0 0 20px;">Log into Invision</a>
-                <p style="font-size: 16px; color: #3A3131; line-height: 1.5; margin: 0;">This link will expire in 24 hours.</p>
-              </td>
-            </tr>
-          </table>
-          {{> footer}}
+        <td style="font-family: 'Manrope', sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
+        <td class="container" style="font-family: 'Manrope', sans-serif; font-size: 14px; vertical-align: top; display: block; max-width: 580px; padding: 10px; width: 580px; Margin: 0 auto;" width="580" valign="top">
+          <div class="header" style="padding: 20px 0;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; width: 100%;">
+              <tr>
+                <td class="align-center" width="100%" style="font-family: 'Manrope', sans-serif; font-size: 14px; vertical-align: top; text-align: center;" valign="top" align="center">
+                  <img src="data:image/png;base64,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" alt style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%;">
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="content" style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
+
+            <!-- START CENTERED WHITE CONTAINER -->
+            <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">Log into Invision</span>
+            <table role="presentation" class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; background: #4A4E75; border: 1px solid white; border-radius: 6px; width: 100%; color: white;" width="100%">
+
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="wrapper" style="font-family: 'Manrope', sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;" valign="top">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; width: 100%;" width="100%">
+                    <tr>
+                      <td style="font-family: 'Manrope', sans-serif; font-size: 14px; vertical-align: top;" valign="top">
+                        <h1 style="font-family: 'Manrope', font-size: 20px; font-weight: 500; text-transform: capitalize; color: white; margin: 0;">Welcome back!</h1>
+                        <p>To access your account, please click the button below.</p>
+                        <a href="{{returnUrl}}" class="button" href="/signup" target="_blank" style="background-color: #27AAE1; text-decoration: none; padding: 10px 20px; border-radius: 5px; color: black; margin: 10px 0; display: inline-flex; gap: 10px;">
+                        Log into Invision
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.6006 10.4824L12.1115 15.9714C11.9971 16.0859 11.8419 16.1502 11.68 16.1502C11.5182 16.1502 11.363 16.0859 11.2485 15.9714C11.1341 15.857 11.0698 15.7018 11.0698 15.5399C11.0698 15.3781 11.1341 15.2229 11.2485 15.1084L15.6969 10.6608H3.75143C3.58968 10.6608 3.43455 10.5965 3.32017 10.4822C3.2058 10.3678 3.14154 10.2127 3.14154 10.0509C3.14154 9.88914 3.2058 9.73401 3.32017 9.61964C3.43455 9.50526 3.58968 9.441 3.75143 9.441H15.6969L11.2485 4.99336C11.1341 4.87892 11.0698 4.72371 11.0698 4.56186C11.0698 4.40002 11.1341 4.2448 11.2485 4.13036C11.363 4.01592 11.5182 3.95163 11.68 3.95163C11.8419 3.95163 11.9971 4.01592 12.1115 4.13036L17.6006 9.6194C17.6573 9.67604 17.7023 9.7433 17.733 9.81734C17.7636 9.89138 17.7794 9.97075 17.7794 10.0509C17.7794 10.131 17.7636 10.2104 17.733 10.2844C17.7023 10.3585 17.6573 10.4258 17.6006 10.4824Z" fill="black"/>
+</svg>
+
+                        </a>
+                        <hr style="border: 0; border-bottom: 1px solid #f6f6f6; Margin: 20px 0;">
+                        <p>This link will expire in 24 hours</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+            <!-- END MAIN CONTENT AREA -->
+            </table>
+
+            <!-- START FOOTER -->
+            <div class="footer" style="clear: both; Margin-top: 10px; text-align: center; width: 100%;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; width: 100%;" width="100%">
+                <tr>
+                  <td class="content-block" style="font-family: 'Manrope', sans-serif; vertical-align: top; color: #9a9ea6; font-size: 12px; text-align: center;" valign="top" align="center">
+                   <p style="color: #9a9ea6; font-size: 12px; text-align: center;">Thanks from Team Invision</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- END FOOTER -->
+
+          <!-- END CENTERED WHITE CONTAINER -->
+          </div>
         </td>
+        <td style="font-family: 'Manrope', sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
       </tr>
     </table>
   </body>
