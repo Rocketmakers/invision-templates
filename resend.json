@@ -31,6 +31,14 @@
     "submitApplicationUnderwriter": {
       "path": "layouts/submitApplicationUnderwriter",
       "templates": ["html", "txt", "subject"]
+    },
+    "applicationUserAdded": {
+      "path": "layouts/applicationUserAdded",
+      "templates": ["html", "txt", "subject"]
+    },
+    "applicationUserRemoved": {
+      "path": "layouts/applicationUserRemoved",
+      "templates": ["html", "txt", "subject"]
     }
   }
 }
