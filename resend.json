@@ -16,6 +16,10 @@
       "path": "layouts/magicLink",
       "templates": ["html", "txt", "subject"]
     },
+    "notRegistered": {
+      "path": "layouts/notRegistered",
+      "templates": ["html", "txt", "subject"]
+    },
     "createApplication": {
       "path": "layouts/createApplication",
       "templates": ["html", "txt", "subject"]
