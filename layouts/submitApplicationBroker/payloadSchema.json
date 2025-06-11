@@ -1,1 +1,1 @@
-{"description":"Specify required object","examples":[{"name":"name"}],"type":"object","properties":{"name":{"type":"string"}},"required":["name"],"$schema":"http://json-schema.org/draft-07/schema#"}
+{"description":"Specify required object","examples":[{"name":"David Kendall"}],"type":"object","properties":{"name":{"type":"string"}},"required":["name"],"$schema":"http://json-schema.org/draft-07/schema#"}
