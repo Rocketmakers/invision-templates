@@ -59,10 +59,12 @@ export const InvisionEmail = ({
       <Container style={container}>
         <Section style={box}>
           <Heading style={h1}>{title}</Heading>
-          <Text style={paragraph}>{copy}</Text>
-          <Button style={button} href={actionLink?.href}>
-            {actionLink?.text}
-          </Button>
+          <Text style={paragraph} dangerouslySetInnerHTML={{ __html: copy }} />
+          {actionLink && (
+            <Button style={button} href={actionLink?.href}>
+              {actionLink?.text}
+            </Button>
+          )}
           {footerText && <Text style={paragraph}>{footerText}</Text>}
           <Hr style={hr} />
           <Text style={footer}>Thanks from Team Invision</Text>
