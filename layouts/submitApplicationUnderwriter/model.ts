@@ -10,7 +10,7 @@ export interface IModel {
 
 export const sampleData: IModel[] = [
   {
-    name: "name",
+    name: "David Kendall",
     returnUrl: "https://www.rocketmakers.com",
   },
   {
