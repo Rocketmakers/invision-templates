@@ -6,7 +6,7 @@ export const main = {
 
 export const h1 = {
   color: "#1D2252",
-  fontSize: "24px",
+  fontSize: "22px",
 };
 
 export const logoContainer = {
@@ -57,6 +57,7 @@ export const button = {
   display: "block",
   width: "200px",
   padding: "10px",
+  margin: "20px 0",
 };
 
 export const footer = {
