@@ -1,3 +1,7 @@
+# React email
+
+The main template is defined in the `reactEmail/emails/invision.tsx`. After making any edits here, run `pnpm generate-templates` from the root to generate the handlebar files which generates the layouts below.
+
 # Layouts
 
 Layouts is the name given to an entire notification template. This is the place where reusable components of notifications (partials) are pulled together, and the data structure for a notification payload is defined.
