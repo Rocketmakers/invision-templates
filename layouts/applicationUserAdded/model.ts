@@ -12,8 +12,8 @@ export interface IModel {
 
 export const sampleData: IModel[] = [
   {
-    name: "name",
-    inviteeName: "inviteeName",
+    name: "David Kendall",
+    inviteeName: "Adam Walker",
     applicationName: "Rocketmakers",
     returnUrl: "https://www.rocketmakers.com",
   },

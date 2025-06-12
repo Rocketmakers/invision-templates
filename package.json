@@ -11,7 +11,8 @@
     "lint-fix": "turbo lint-fix",
     "compile-layouts": "turbo compile-layouts",
     "gen-payload-schemas": "exec generate-schemas",
-    "test-templates": "exec validate-templates"
+    "test-templates": "exec validate-templates",
+    "generate-templates": "tsx ./reactEmail/generate.ts"
   },
   "config": {
     "commitizen": {
@@ -27,10 +28,18 @@
     "eslint": "8.57.1",
     "husky": "9.1.7",
     "prettier": "3.5.2",
-    "turbo": "2.4.2"
+    "turbo": "2.4.2",
+    "@react-email/components": "0.0.42",
+    "react-dom": "^19.0.0",
+    "react": "^19.0.0"
   },
   "devDependencies": {
-    "@repo/tsconfig": "workspace:*"
+    "@repo/tsconfig": "workspace:*",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "@types/node": "24.0.1",
+    "react-email": "4.0.16",
+    "tsx": "^4.20.2"
   },
   "packageManager": "pnpm@10.4.1"
 }

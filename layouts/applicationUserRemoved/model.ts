@@ -11,8 +11,8 @@ export interface IModel {
 
 export const sampleData: IModel[] = [
   {
-    name: "name",
-    removeeName: "removeeName",
+    name: "David Kendall",
+    removeeName: "Adam Walker",
     applicationName: "Rocketmakers",
   },
 ];
