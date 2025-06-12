@@ -76,8 +76,12 @@ async function generateEmails() {
 
   // submitApplicationAppointedContact
   generate("submitApplicationAppointedContact", {
-    title: "Application Submitted",
-    copy: "Thank you for your application. Our underwriter team will be in contact with you regarding your application.",
+    title: "Thanks for applying with Invision",
+    copy: `Thank you for your application. Our trusted broking partners will be in touch within the next few days to discuss your application and cyber insurance needs.<br/><br/>
+    A PDF copy of your application is attached to this email.
+    <br/><br/>
+    In the meantime, if you have any questions, you can reach out directly to your broker via the contact details found at <a href="www.invisioncyber.com/partners/brokers.">www.invisioncyber.com/partners/brokers.</a>
+    For anything else please contact us at <a href="mailto:enquiries@invisioncyber.com">enquiries@invisioncyber.com</a>—we're here to help.`,
   });
 
   // submitApplicationBroker
