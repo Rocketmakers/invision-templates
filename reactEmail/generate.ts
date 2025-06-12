@@ -28,7 +28,7 @@ async function generateEmails() {
   // applicationUserAdded
   generate("applicationUserAdded", {
     title: "You've been invited to help with an application",
-    copy: "You have been invited by {{inviteeName}} to help with an application for {{applicationName}} on the Invision platform. Please click the button below to view the application.",
+    copy: "You have been invited by {{inviteeName}} to help with a cyber insurance application for {{applicationName}} on the Invision platform. Please click the button below to view the application.",
     actionLink: {
       href: "{{returnUrl}}",
       text: "View application"
@@ -87,7 +87,7 @@ async function generateEmails() {
   // submitApplicationBroker
   generate("submitApplicationBroker", {
     title: "New application available",
-    copy: "An application has been submitted to the Invision platform and has elected you as their broker. Our underwriter team will be in contact with you regarding this application.",
+    copy: "A new application has been submitted via the Invision platform. The PDF copy, containing the applicants details and questionnaire is attached.",
   });
 
   // submitApplicationUnderwriter
