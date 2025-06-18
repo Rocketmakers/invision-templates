@@ -25,6 +25,7 @@ import {
   button,
   hr,
   footer,
+  buffer,
 } from "./styles";
 
 export interface InvisionEmailProps {
@@ -70,6 +71,8 @@ export const InvisionEmail = ({
           <Text style={footer}>Thanks from Team Invision</Text>
         </Section>
       </Container>
+
+      <Container style={buffer} />
     </Body>
   </Html>
 );
