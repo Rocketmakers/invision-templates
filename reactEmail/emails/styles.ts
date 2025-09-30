@@ -28,7 +28,7 @@ export const container = {
 
 export const buffer = {
   height: "80px",
-}
+};
 
 export const box = {
   padding: "0 48px",
